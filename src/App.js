@@ -5,6 +5,11 @@ function App() {
   const [count, setCount] = useState(0)
   const [disabled, setDisabled] = useState(false)
   const changeValue = amount =>{
+    if(count+amount>50)
+      alert('최대값을 초과하였습니다')
+    else if(count+amount<-50)
+      alert('최소값을 초과하였습니다')
+    else
       setCount(pre=>pre+amount)
   }
   return (
